@@ -1,0 +1,40 @@
+#root {
+  margin: 0;  
+}
+
+#bg-video{
+  z-index: -9;
+  min-width: 100vw;
+  min-height: 100vh;
+}
+.logo-nav {
+    font-family: Avenir-bold;
+}
+
+.main{
+  height: 100vh;
+}
+
+.languages{
+  margin-right: -2px;
+}
+
+.arrow-wrap{
+  max-height: 70px;
+  overflow: hidden;
+}
+.arrow-down{
+  animation: animArrow 1500ms infinite forwards cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+
+@keyframes animArrow{
+  0%{
+      transform: translateY(0px);
+  }
+  50%{
+      transform: translateY(30px);
+  }
+  100%{
+      transform: translateY(50px);
+  }
+}
