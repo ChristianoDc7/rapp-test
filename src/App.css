@@ -20,8 +20,10 @@
 }
 
 .arrow-wrap{
-  max-height: 70px;
+  max-height: 100px;
   overflow: hidden;
+  position: absolute;
+  bottom: 20px;
 }
 .arrow-down{
   animation: animArrow 1500ms infinite forwards cubic-bezier(0.55, 0.055, 0.675, 0.19);
