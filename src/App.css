@@ -14,10 +14,6 @@
   height: 100vh;
 }
 
-.languages{
-  margin-right: -2px;
-}
-
 .arrow-wrap{
   max-height: 100px;
   overflow: hidden;
@@ -25,7 +21,12 @@
   bottom: 20px;
 }
 .arrow-down{
-  animation: animArrow 1500ms infinite forwards cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  animation: animArrow 1s infinite forwards cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+
+.footer-grad{
+  background: rgb(232,55,128);
+  background: linear-gradient(135deg, rgba(232,55,128,1) 0%, rgba(241,137,38,1) 100%);
 }
 
 @keyframes animArrow{
@@ -38,4 +39,41 @@
   100%{
       transform: translateY(50px);
   }
+}
+
+.nav-mobile{
+  filter: blur(-8px);
+}
+
+@media(max-width: 600px){
+  .menu-icon,.close-icon  {
+    display: inline-block;
+    cursor: pointer;
+}
+
+.nav-mobile{
+  backdrop-filter: blur(10px);
+  width: 100vh;
+  height: 100vh;
+}
+
+.bar1, .bar2, .bar3 {
+    width: 38px;
+    height: 4px;
+    background-color: white;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+    
+.close-icon .bar1 {
+    transform: rotate(-45deg) translate(-9px, 6px) ;
+}
+
+.close-icon .bar2 {
+    opacity: 0;
+}
+
+.close-icon .bar3 {
+    transform: rotate(45deg) translate(-8px, -8px) ;
+}
 }

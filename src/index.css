@@ -5,12 +5,12 @@
 
 @font-face {
   font-family: "Avenir";
-  src: url("./assets/Avenir-Book.ttf");
+  src: url("./assets/font/Avenir-Book.ttf");
 }
 
 @font-face {
   font-family: "Avenir-bold";
-  src: url("./assets/Avenir-Black.ttf");
+  src: url("./assets/font/Avenir-Black.ttf");
 }
 :root {
   font-family: Avenir, Helvetica, Arial, sans-serif;
