@@ -4,8 +4,7 @@
 
 #bg-video{
   z-index: -9;
-  min-width: 100vw;
-  min-height: 100vh;
+  min-width: 100%;
 }
 .logo-nav {
     font-family: Avenir-bold;

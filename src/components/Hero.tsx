@@ -4,7 +4,7 @@ import Typewriter from 'typewriter-effect';
 
 export const Hero = () => {
     return (
-        <div className="h-full flex justify-evenly flex-col">
+        <div className="h-full flex align-middle flex-col">
             <h1 className="font-bold text-center">
                     <Typewriter
                             options={{
@@ -17,7 +17,7 @@ export const Hero = () => {
                                 .typeString(`We make people`)
                                 .pauseFor(700)
                                 .deleteAll()
-                                .typeString(`more valuable to Brands`)
+                                .typeString(`More valuable to Brands`)
                                 .start();
                             }}
                         /> 
