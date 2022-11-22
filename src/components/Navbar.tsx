@@ -4,32 +4,19 @@ import Languages from "../widgets/Languages";
 
 const Navbar = () => {
     const isSmall = useMediaQuery("(max-width:600px)");
-    const menuButton = document.querySelector("#menu-button");
+    const [open, setOpen ] = React.useState(false);
 
     const toggleMobileMenu = () => {
-        let menu = document.querySelector(".menu");
-        console.log("click");
-        
-        menuButton?.setAttribute(
-            "class",
-            menuButton?.getAttribute("class") === "close-icon"
-                ? "menu-icon"
-                : "close-icon"
-        );
-        if(menu){
-            (menu as any).style.top = menuButton?.getAttribute("class") === "close-icon" ? "0" : "-120%";
-        }
+        setOpen(!open)
     }
 
     const itemMenu = document.querySelectorAll(".menu li a");
 
     useEffect(()=>{
-        menuButton?.addEventListener("click", () => toggleMobileMenu(), false);
         itemMenu?.forEach(element => {
             element.addEventListener("click", () => toggleMobileMenu(), false);
         }); 
         return () => {
-            menuButton?.removeEventListener("click", () => toggleMobileMenu(), false);
             itemMenu?.forEach(element => {
                 element.removeEventListener("click", () => toggleMobileMenu(), false);
             }); 
@@ -52,8 +39,11 @@ const Navbar = () => {
                 </div>
 
                 <div
-                    className={`menu-icon z-20 ${isSmall ? "block" : "hidden"}`}
-                    id="menu-button"
+                    className={`z-20 
+                    ${isSmall ? "block" : "hidden"}
+                    ${open ? "close-icon" : "menu-icon"}
+                    `}
+                    onClick={()=>toggleMobileMenu()}
                 >
                     <div className="bar1"></div>
                     <div className="bar2"></div>
@@ -61,11 +51,10 @@ const Navbar = () => {
                 </div>
 
                 <ul
-                    className={`menu flex place-items-center gap-3 ${
-                        isSmall
-                            ? "nav-mobile flex-col fixed"
-                            : "flex-row"
-                    }`}
+                    className={`menu flex place-items-center  
+                    ${ isSmall ? "flex-col fixed top-0 left-0 w-full justify-center gap-24" : "flex-row gap-3"}
+                    ${open ? "nav-mobile block" : "hidden"}
+                    `}
                 >
                     <li>
                         <a href="#">About</a>
