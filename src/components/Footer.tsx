@@ -1,8 +1,9 @@
 import React from 'react'
 import useMediaQuery from '../hooks/useMediaQuery'
+import { TProps } from '../models/UIProps'
 
-const Footer = () => {
-    const isSmall = useMediaQuery("(max-width: 600px)")
+const Footer = (props: TProps) => {
+    const {isSmall} = props
 
   return (
     <div className={`p-8 w-full flex ${isSmall && "flex-col place-items-center text-center gap-3"} justify-between footer-grad`}>

@@ -1,5 +1,12 @@
 import { useEffect, useState } from 'react'
 
+/**
+ * 
+ * @description : an hooks to determine media queries to use 
+ * @params : media queries like max-width or min-width
+ * @returns boolean to determine if the media queries match
+ */
+
 function useMediaQuery(query: string): boolean {
     const getMatches = (query: string): boolean => {
         // Prevents SSR issues
