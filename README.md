@@ -2,7 +2,8 @@
 
 Hello everybody , this is the test that you gave to me , I've trying to give my best so enjoy 😉😉 <br />
 I've used Javascript, React Typescript, CSS and some librairies for the User Interfaces. <br />
-You can preview the demos online by clicking this link 👉_[here](https://proximity-frontend-test.vercel.app/)_👈
+You can preview the demos online by clicking this link 👉_[here](https://proximity-frontend-test.vercel.app/)_👈 <br />
+The code is also visible on my github via this link [github.com/ChristianoDc7/rapp-test](https://github.com/ChristianoDc7/rapp-test)
 
 ## Installation
 If you wanna view this project offline, please follow the instruct bellow : 
